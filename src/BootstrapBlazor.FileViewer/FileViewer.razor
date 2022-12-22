@@ -1,0 +1,21 @@
+﻿@namespace BootstrapBlazor.Components
+
+@if (Html != null)
+{
+    <iframe allow="fullscreen"
+            style="@($"border: none; width: {Width}; height: {Height};{StyleString}")"
+            srcdoc="@Html" />
+
+}
+else if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <p>@ErrorMessage</p>
+}
+else if (string.IsNullOrEmpty(Filename))
+{
+    <p>无数据</p>
+}
+else
+{
+    <p>载入中...</p>
+}
