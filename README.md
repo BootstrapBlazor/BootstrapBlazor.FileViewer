@@ -28,6 +28,17 @@ https://blazor.app1.es/fileViewers
 <FileViewer Filename="https://localhost:5011/_content/DemoShared/sample.xlsx" />
 
 <FileViewer Filename="https://localhost:5011/_content/DemoShared/sample.docx" />
+
+<FileViewer @ref="fileViewer" Filename=@Url />
+
+@code{
+    private string Url { get; set; } = ("c:/sample.docx");
+
+    private async Task Apply()
+    {
+        await fileViewer.Reload(Url);
+    }
+}
 ```
 
 4.参数说明
