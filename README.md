@@ -51,7 +51,9 @@ https://blazor.app1.es/fileViewers
 | StyleString  | 组件外观 Css Style |  | 
 | Html  | 设置 Html 直接渲染  |  | 
 | Stream  | 用于渲染的文件流,为空则用Filename参数读取文件 | null | 
-| IsExcel  | 文件流模式需要指定是否 Excel. 默认为 false |  | 
+| IsExcel  | 文件流模式需要指定是否 Excel  | false | 
+| NodataString  | 无数据提示文本 | 无数据 | 
+| IsExcel  | 载入中提示文本  | 载入中... | 
 | Reload(string filename) | 重新载入文件方法 | |
 | Refresh() | 刷新方法 | |
 

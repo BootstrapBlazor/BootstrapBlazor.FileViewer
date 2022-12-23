@@ -64,6 +64,18 @@ public partial class FileViewer
     [Parameter]
     public bool IsExcel { get; set; }
 
+    /// <summary>
+    /// 获得/设置 无数据提示文本,默认为 无数据
+    /// </summary>
+    [Parameter]
+    public string NodataString { get; set; } = "无数据";
+
+    /// <summary>
+    /// 获得/设置 载入中提示文本,默认为 载入中...
+    /// </summary>
+    [Parameter]
+    public string LoadingString { get; set; } = "载入中...";
+
     string? ErrorMessage { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
