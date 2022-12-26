@@ -4,7 +4,7 @@
 {
     <iframe allow="fullscreen"
             style="@($"border: none; width: {Width}; height: {Height};{StyleString}")"
-            src="@Html" />
+            srcdoc="@Html" />
 
 }
 else if (!string.IsNullOrEmpty(ErrorMessage))
