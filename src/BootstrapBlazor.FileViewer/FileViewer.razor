@@ -2,10 +2,11 @@
 
 @if (Html != null)
 {
-    <iframe allow="fullscreen"
+    <iframe @ref="Element"
+            sandbox="allow-scripts"
+            allow="fullscreen"
             style="@($"border: none; width: {Width}; height: {Height};{StyleString}")"
             srcdoc="@Html" />
-
 }
 else if (!string.IsNullOrEmpty(ErrorMessage))
 {

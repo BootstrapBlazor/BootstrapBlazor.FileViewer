@@ -22,6 +22,8 @@ namespace BootstrapBlazor.Components;
 public partial class FileViewer
 {
 
+    private ElementReference Element { get; set; }
+
     /// <summary>
     /// 获得/设置 Excel/Word 文件路径或者URL
     /// </summary>
