@@ -56,8 +56,12 @@ https://blazor.app1.es/fileViewers
 | LoadingString  | 载入中提示文本  | 载入中... | 
 | Reload(string filename) | 重新载入文件方法 | |
 | Refresh() | 刷新方法 | |
+ 
+---
+#### 更新历史
 
-
+v7.0.2
+- 修复 [预览表格时间转换错误](https://github.com/densen2014/BootstrapBlazor.FileViewer/issues/1)
 ---
 #### Blazor 组件
 
