@@ -55,6 +55,7 @@ https://blazor.app1.es/fileViewers
 | NodataString  | 无数据提示文本 | 无数据 | 
 | LoadingString  | 载入中提示文本  | 载入中... | 
 | Reload(string filename) | 重新载入文件方法 | |
+| Reload(Stream stream) | 重新载入流方法 | |
 | Refresh() | 刷新方法 | |
  
 ---
@@ -62,6 +63,11 @@ https://blazor.app1.es/fileViewers
 
 v7.0.2
 - 修复 [预览表格时间转换错误](https://github.com/densen2014/BootstrapBlazor.FileViewer/issues/1)
+
+v7.0.3
+- 添加 Reload(Stream stream) : 重新载入流方法
+- 修复 Reload(string filename) 不清空 Stream
+
 ---
 #### Blazor 组件
 

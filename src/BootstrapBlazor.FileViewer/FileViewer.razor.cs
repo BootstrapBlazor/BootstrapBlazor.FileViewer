@@ -96,6 +96,20 @@ public partial class FileViewer
     {
         Filename = filename;
         Html = null;
+        Stream = null;
+        StateHasChanged();
+        await Refresh();
+    }
+
+    /// <summary>
+    /// 重新载入流
+    /// </summary>
+    /// <returns></returns>
+    public virtual async Task Reload(Stream stream)
+    {
+        Stream = stream;
+        Html = null;
+        Filename = null;
         StateHasChanged();
         await Refresh();
     }
