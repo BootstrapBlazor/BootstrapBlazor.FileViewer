@@ -57,7 +57,23 @@ https://blazor.app1.es/fileViewers
 | Reload(string filename) | 重新载入文件方法 | |
 | Reload(Stream stream) | 重新载入流方法 | |
 | Refresh() | 刷新方法 | |
+
  
+### 5.特别说明
+
+如果在 Linux 下使用需要安装 libgdiplus 并开启 System.Drawing support.
+
+相关错误提示: The type initializer for 'Gdip' threw an exception.
+
+Enable System.Drawing support for non-Windows platforms: (reference):
+
+In your project file (*.csproj), add:
+```
+ <ItemGroup>
+     <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+ </ItemGroup>
+```
+
 ---
 #### 更新历史
 
