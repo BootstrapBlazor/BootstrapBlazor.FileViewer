@@ -6,13 +6,7 @@
 
 using ce.office.extension;
 using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
-using NPOI.Util;
-using OpenXmlPowerTools;
-using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
 
 namespace BootstrapBlazor.Components;
 
@@ -78,7 +72,7 @@ public partial class FileViewer
     [Parameter]
     public string LoadingString { get; set; } = "载入中...";
 
-    string? ErrorMessage { get; set; }
+    private string? ErrorMessage { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -120,7 +114,7 @@ public partial class FileViewer
     /// <returns></returns>
     public virtual async Task Refresh()
     {
-        if (ErrorMessage!=null)
+        if (ErrorMessage != null)
         {
             ErrorMessage = null;
             StateHasChanged();
