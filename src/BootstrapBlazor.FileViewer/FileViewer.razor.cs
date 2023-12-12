@@ -15,7 +15,9 @@ namespace BootstrapBlazor.Components;
 /// </summary>
 public partial class FileViewer
 {
-
+    /// <summary>
+    /// UI界面元素的引用对象
+    /// </summary>
     private ElementReference Element { get; set; }
 
     /// <summary>
