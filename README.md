@@ -77,6 +77,10 @@ In your project file (*.csproj), add:
 ---
 #### 更新历史
 
+v8.0.2
+- 修复 [依赖包日期格式转换错误](https://github.com/densen2014/BootstrapBlazor.FileViewer/issues/4)
+- 修复 [组件依赖](https://github.com/densen2014/BootstrapBlazor.FileViewer/issues/2)
+
 v7.0.2
 - 修复 [预览表格时间转换错误](https://github.com/densen2014/BootstrapBlazor.FileViewer/issues/1)
 

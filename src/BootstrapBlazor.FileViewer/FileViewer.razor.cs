@@ -172,7 +172,7 @@ public partial class FileViewer
         }
         catch (Exception e)
         {
-            ErrorMessage = e.Message;
+            ErrorMessage = e.Message + e.StackTrace;
             StateHasChanged();
         }
 
