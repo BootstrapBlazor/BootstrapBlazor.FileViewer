@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>8.0.2</Version>
+        <Version>8.0.3-beta2</Version>
         <PackageProjectUrl>https://github.com/densen2014/BootstrapBlazor.FileViewer</PackageProjectUrl>
         <RepositoryUrl>https://github.com/densen2014/BootstrapBlazor.FileViewer</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
@@ -20,7 +20,7 @@
     </PropertyGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.10" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
@@ -33,21 +33,7 @@
 
     <ItemGroup>
         <PackageReference Include="ce.office.extension" Version="2.*" />
-        <PackageReference Include="NPOI" Version="2.7.0" />
-        <!--<PackageReference Include="DocumentFormat.OpenXml" Version="2.*" />
-        <PackageReference Include="NPOI" Version="2.5.1.0" />
-        <PackageReference Include="Open-Xml-PowerTools" Version="4.*" />-->
+        <PackageReference Include="NPOI" Version="2.6.2" /> 
     </ItemGroup>
-
-    <ItemGroup>
-        <Folder Include="wwwroot\" />
-    </ItemGroup>
-
-    <!-- 通过移除正常的引用并替换成固定版本的引用，达到无论如何更新都无法生效的目的。 -->
-    <Target Condition="'$(TargetFramework)' == 'net6.0'" Name="ReferenceStaticLegacyPackage" BeforeTargets="CollectPackageReferences">
-        <ItemGroup>
-            <PackageReference Remove="Microsoft.AspNetCore.Components.Web" />
-            <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0" />
-        </ItemGroup>
-    </Target>
+    
 </Project>
